@@ -152,7 +152,7 @@ const Navbar = () => {
         x: "100%", 
         duration: 0.4, 
         ease: "power3.in",
-        onComplete: () => gsap.set(menu, { display: "none" })
+        onComplete: () => { gsap.set(menu, { display: "none" }); }
       });
     }
   }, [isMenuOpen]);

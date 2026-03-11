@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
+/* ═══════════════════════════════════════════
+   BRAND TOKENS
+   Primary:   #0b59f1  rgb(11,89,241)
+   Dark BG:   #0E141C  rgb(14,20,28)
+   Accent:    #f2ca50  rgb(242,202,80)
+   Gray:      #4e525e  rgb(78,82,94)
+   ═══════════════════════════════════════════ */
+
 :root {
+  --brand-primary: #0b59f1;
+  --brand-primary-rgb: 11, 89, 241;
+  --brand-dark: #0E141C;
+  --brand-dark-rgb: 14, 20, 28;
+  --brand-accent: #f2ca50;
+  --brand-accent-rgb: 242, 202, 80;
+  --brand-gray: #4e525e;
+  --brand-gray-rgb: 78, 82, 94;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0E141C;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-gray: var(--brand-gray);
+  --font-sans: var(--font-funnel-sans), var(--font-geist-sans), sans-serif;
+  --font-display: var(--font-funnel-display), var(--font-geist-sans), sans-serif;
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ═══════════════════════════════════════════
+   ANTIGRAVITY HERO — light minimal
+   ═══════════════════════════════════════════ */
+
+/* Subtle dot grid for depth */
+.hero-dot-grid {
+  background-image: radial-gradient(circle, rgba(14,20,28,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Floating element base styles */
+.antigravity-element {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  will-change: transform;
+  transition: filter 0.3s ease;
+}
+
+/* Gentle ambient float keyframe — very subtle */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }

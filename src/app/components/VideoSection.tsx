@@ -111,19 +111,16 @@ const VideoSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full flex items-center justify-center overflow-hidden"
+      className="relative w-full flex items-center justify-center overflow-hidden py-12 md:py-24 lg:py-32"
       style={{
-        padding: "80px 0 120px",
         background: "#FFFFFF",
       }}
     >
       {/* Video Container */}
       <div
         ref={videoWrapperRef}
-        className="relative w-full overflow-hidden"
+        className="relative w-[calc(100%-40px)] md:w-[calc(100%-240px)] max-w-[1400px] overflow-hidden"
         style={{
-          maxWidth: "calc(100vw - 240px)",
-          width: "100%",
           aspectRatio: "16 / 9",
           borderRadius: "24px",
           background: "#0E141C",

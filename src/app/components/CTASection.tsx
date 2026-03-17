@@ -268,7 +268,7 @@ const CTASection = () => {
               style={{
                 width: "170%",
                 aspectRatio: "1",
-                background: "#f2ca50",
+                background: "#000000",
                 transform: "translate(-50%, -50%)",
               }}
             />

@@ -422,9 +422,9 @@ const ResultsSection = () => {
         <p
           className="text-lg md:text-xl lg:text-2xl font-bold max-w-3xl mx-auto"
           style={{
-            color: "#0b59f1",
+            color: "#FFFFFF",
             fontFamily: "var(--font-funnel-display), 'Funnel Display', sans-serif",
-            textShadow: "0 0 30px rgba(11,89,241,0.2)",
+            textShadow: "0 0 20px rgba(255,255,255,0.1)",
           }}
         >
           This is a GTM revenue activation engine — not a marketing experiment.
